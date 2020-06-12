@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import styled from 'styled-components'
 import profilepic from '../assets/images/profilepicture.png'
 import Heading from '../shared/Heading'
+import {GithubOutlined, LinkedinOutlined, GitlabOutlined, FacebookOutlined} from '@ant-design/icons'
 
 
 
@@ -48,6 +49,11 @@ const {Content} = Layout
                         <Col span={10}>
                             <Heading.H1>Adrian Rozanno C. Valdepeñas</Heading.H1>
                             <Heading.H2>Full Stack Web Developer</Heading.H2>
+                            <GithubOutlined />
+                            <GitlabOutlined />
+                            <LinkedinOutlined />
+                            <FacebookOutlined />
+
                         </Col>
                     </Row>
 
