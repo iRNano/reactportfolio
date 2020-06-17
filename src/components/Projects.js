@@ -19,6 +19,23 @@ const ButtonsDiv = styled.div`
 
 `
 
+const TagsUL = styled.ul`
+    list-style-type:none;
+    display:flex;
+    justify-content:space-between;
+    padding:0;
+    color:white;
+
+    li{
+        background-color:grey;
+        margin-right:.5rem;
+        padding: .25rem;
+        font-size: .5rem;
+        
+    }
+
+`
+
 const SkillsDiv = styled.div`
     display:flex;
 
@@ -43,10 +60,12 @@ const Projects = () => {
                                     <Heading.H1>Happy Nails</Heading.H1>
                                     <p>Static Website</p>
                                     <SkillsDiv>
-                                        HTML
-                                        CSS
-                                        BOOTSTRAP
-                                        JAVASCRIPT
+                                        <TagsUL>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>BOOTSTRAP</li>
+                                        </TagsUL>
+                                        
                                     </SkillsDiv>
                                     <ButtonsDiv>
                                         <a href="https://irnano.github.io/capstone1/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
@@ -62,11 +81,11 @@ const Projects = () => {
                                     <Heading.H1>Asset Mania</Heading.H1>
                                     <p>Asset Management System</p>
                                     <SkillsDiv>
-                                        PHP
-                                        CSS
-                                        LARAVEL
-                                        BOOTSTRAP
-                                        JAVASCRIPT
+                                        <TagsUL>
+                                                <li>PHP</li>
+                                                <li>LARAVEL</li>
+                                                <li>MYSQL</li>
+                                        </TagsUL>
                                     </SkillsDiv>
                                     <ButtonsDiv>
                                         <a href="https://assetmania.herokuapp.com/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
@@ -82,9 +101,12 @@ const Projects = () => {
                                     <Heading.H1>Nagrand Resort & Spa</Heading.H1>
                                     <p>Reservation System</p>
                                     <SkillsDiv>
-                                        HTML
-                                        CSS
-                                        JAVASCRIPT
+                                        <TagsUL>
+                                            <li>REACT</li>
+                                            <li>BOOTSTRAP</li>
+                                            <li>NODE</li>
+                                            <li>MONGODB</li>
+                                        </TagsUL>
                                     </SkillsDiv>
                                     <ButtonsDiv>
                                         <a href="https://nagrand-hotel.netlify.app/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>

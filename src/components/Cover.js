@@ -23,7 +23,7 @@ const ProfilePic = styled.img.attrs(
 )`
     
     @media all and (min-width:1001px){
-        max-width:400px;
+        max-width:350px;
         border-radius: 75%;
     }
 
@@ -68,7 +68,7 @@ const {Content} = Layout
                             {/* <Avatar shape="circle" size="large" src={profilepic}></Avatar> */}
                             <ProfilePic></ProfilePic>
                         </Col>
-                        <Col style={{padding:20}}span={10}>
+                        <Col style={{paddingTop:50}}span={10}>
                             <Heading.H1 style={{margin:0}}>ADRIAN </Heading.H1>
                             <Heading.H1>VALDEPEÑAS</Heading.H1>
                             <Heading.H3>Full Stack Web Developer</Heading.H3>
