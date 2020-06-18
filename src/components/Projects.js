@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import Heading from '../shared/Heading'
 import Button from '../shared/Button'
 import {Card} from 'antd'
+import happnails from '../assets/images/happnails500.png'
+import assetmania from '../assets/images/assetmania500.png'
+import nagrand from '../assets/images/nagrand500.png'
 
 const ProjectsDiv = styled.div`
     min-height:100vh;
@@ -15,7 +18,7 @@ const ProjectsDiv = styled.div`
 const ButtonsDiv = styled.div`
     display:flex;
     justify-content:space-between;
-    width:70%;
+    width:60%;
 
 `
 
@@ -42,76 +45,110 @@ const SkillsDiv = styled.div`
 `
 
 
-
 const Projects = () => {
     const {Content} = Layout;
+    const {Meta} = Card;
+
+    const onClickHandler = () => {
+        alert('click')
+    }
     return(
         
             <Layout style={{"background-color":"white"}}>
                 <Content>
                     <ProjectsDiv>
                         <Heading.H1 style={{padding: "1em 0em", "text-align": "center"}}>Projects</Heading.H1>
-                        <Row gutter="2">
-                            <Col span={8}>
-                                <Card 
-                                    title="CP1"
+                        <Row gutter={40}>
+                            <Col xs={24} lg={8}>
+                                <Card
                                     
+                                    bordered={false}
+                                    cover={
+                                        <img src={happnails}></img>
+                                    }
+                                    bodyStyle={{"padding":"20px 0px"}}
                                 >
-                                    <Heading.H1>Happy Nails</Heading.H1>
-                                    <p>Static Website</p>
-                                    <SkillsDiv>
-                                        <TagsUL>
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                            <li>BOOTSTRAP</li>
-                                        </TagsUL>
-                                        
-                                    </SkillsDiv>
-                                    <ButtonsDiv>
-                                        <a href="https://irnano.github.io/capstone1/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
-                                        <a href="https://github.com/iRNano/capstone1" target="_blank"><Button size="small">VIEW CODE</Button></a>
-                                    </ButtonsDiv>
+                                    <Meta title={<Heading.H3>Happy Nails</Heading.H3>}
+                                        description={
+                                        <div>
+                                            <p>Static Website</p>
+                                            <SkillsDiv>
+                                                <TagsUL>
+                                                    <li>HTML</li>
+                                                    <li>CSS</li>
+                                                    <li>BOOTSTRAP</li>
+                                                    <li>JAVASCRIPT</li>
+                                                </TagsUL>
+                                                
+                                            </SkillsDiv>
+                                            <ButtonsDiv>
+                                                <a href="https://irnano.github.io/capstone1/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
+                                                <a href="https://github.com/iRNano/capstone1" target="_blank"><Button size="small">VIEW CODE</Button></a>
+                                            </ButtonsDiv> 
+                                        </div>
+                                    }>
+                                    </Meta>        
                                 </Card>
                             </Col>
-                            <Col span={8}>
-                                <Card 
-                                    title="CP2"
-                                    
+                            <Col xs={24} lg={8}>
+                                <Card
+                                    bodyStyle={{"padding":"20px 0px"}}
+                                    bordered={false} 
+                                    cover={
+                                        <img src={assetmania}></img>
+                                    }
                                 >
-                                    <Heading.H1>Asset Mania</Heading.H1>
-                                    <p>Asset Management System</p>
-                                    <SkillsDiv>
-                                        <TagsUL>
-                                                <li>PHP</li>
-                                                <li>LARAVEL</li>
-                                                <li>MYSQL</li>
-                                        </TagsUL>
-                                    </SkillsDiv>
-                                    <ButtonsDiv>
-                                        <a href="https://assetmania.herokuapp.com/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
-                                        <a href="https://github.com/iRNano/assetmgmt" target="_blank"><Button size="small">VIEW CODE</Button></a>
-                                    </ButtonsDiv>
+                                    <Meta 
+                                        title={<Heading.H3>Asset Mania</Heading.H3>}
+                                        description={
+                                            <div>
+                                                <p>Asset Management System</p>
+                                                <SkillsDiv>
+                                                    <TagsUL>
+                                                            <li>PHP</li>
+                                                            <li>LARAVEL</li>
+                                                            <li>MYSQL</li>
+                                                    </TagsUL>
+                                                </SkillsDiv>
+                                                <ButtonsDiv>
+                                                    <a href="https://assetmania.herokuapp.com/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
+                                                    <a href="https://github.com/iRNano/assetmgmt" target="_blank"><Button size="small">VIEW CODE</Button></a>
+                                                </ButtonsDiv>
+                                            </div>
+                                        }
+                                    >                                    
+                                    </Meta>                                    
                                 </Card>
                             </Col>    
-                            <Col span={8}>
-                                <Card 
-                                    title="CP3"
-                
+                            <Col xs={24} lg={8}>
+                                <Card
+                                    bordered={false}
+                                    cover={
+                                        <img src={nagrand}></img>
+                                    }
+                                    bodyStyle={{"padding":"20px 0px"}}
                                 >
-                                    <Heading.H1>Nagrand Resort & Spa</Heading.H1>
-                                    <p>Reservation System</p>
-                                    <SkillsDiv>
-                                        <TagsUL>
-                                            <li>REACT</li>
-                                            <li>BOOTSTRAP</li>
-                                            <li>NODE</li>
-                                            <li>MONGODB</li>
-                                        </TagsUL>
-                                    </SkillsDiv>
-                                    <ButtonsDiv>
-                                        <a href="https://nagrand-hotel.netlify.app/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
-                                        <a href="https://github.com/iRNano/nagrandhotel" target="_blank"><Button size="small">VIEW CODE</Button></a>
-                                    </ButtonsDiv>                  
+                                    <Meta
+                                        title={<Heading.H3>Nagrand Resort & Spa</Heading.H3>}
+                                        description={
+                                            <div>
+                                                <p>Reservation System</p>
+                                                <SkillsDiv>
+                                                    <TagsUL>
+                                                        <li>REACTJS</li>
+                                                        <li>EXPRESSJS</li>
+                                                        <li>NODEJS</li>
+                                                        <li>MONGODB</li>
+                                                    </TagsUL>
+                                                </SkillsDiv>
+                                                <ButtonsDiv>
+                                                    <a href="https://nagrand-hotel.netlify.app/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
+                                                    <a href="https://github.com/iRNano/nagrandhotel" target="_blank"><Button size="small">VIEW CODE</Button></a>
+                                                </ButtonsDiv>
+                                            </div>
+                                        }
+                                    >
+                                    </Meta>                
                                 </Card>
                             </Col>
                         </Row>
