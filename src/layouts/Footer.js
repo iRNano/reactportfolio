@@ -1,6 +1,6 @@
 import React from 'react'
-import {Layout, Row, Col} from 'antd'
-import styled from 'styled-components'
+import {Layout} from 'antd'
+
 
 const Footer = () => {
     const {Footer} = Layout;

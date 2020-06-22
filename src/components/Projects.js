@@ -17,9 +17,6 @@ const ProjectsDiv = styled.div`
 
 const ButtonsDiv = styled.div`
     display:flex;
-    justify-content:space-between;
-    width:60%;
-
 `
 
 const TagsUL = styled.ul`
@@ -67,6 +64,7 @@ const Projects = () => {
                                         <img src={happnails}></img>
                                     }
                                     bodyStyle={{"padding":"20px 0px"}}
+                                    style={{"margin": "5% 0%"}}
                                 >
                                     <Meta title={<Heading.H3>Happy Nails</Heading.H3>}
                                         description={
@@ -97,6 +95,7 @@ const Projects = () => {
                                     cover={
                                         <img src={assetmania}></img>
                                     }
+                                    style={{"margin": "5% 0%"}}
                                 >
                                     <Meta 
                                         title={<Heading.H3>Asset Mania</Heading.H3>}
@@ -127,6 +126,7 @@ const Projects = () => {
                                         <img src={nagrand}></img>
                                     }
                                     bodyStyle={{"padding":"20px 0px"}}
+                                    style={{"margin": "5% 0%"}}
                                 >
                                     <Meta
                                         title={<Heading.H3>Nagrand Resort & Spa</Heading.H3>}

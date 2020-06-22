@@ -4,9 +4,10 @@ const Button = styled.button`
     appearance: none;
     background-color: darkgray;
     padding: 0.25em 0.5em;
-    margin: 0em 0em 1em 0em;
+    margin: 0em 1em 1em 0em;
     transition: background-color 0.25s, color 0.25s;
     border-radius: 5px;
+    border:none;
 
     &:hover {
         ${props => {
@@ -19,6 +20,8 @@ const Button = styled.button`
                     return `color: ${props.theme.pine};`;
                 case 'booking':
                     return `color: ${props.theme.pine};`;
+                default:
+                    return "color: black";
             }
             return (
                 "color: black;"
