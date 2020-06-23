@@ -2,18 +2,20 @@ import styled from "styled-components"
 
 const Button = styled.button`
     appearance: none;
-    background-color: darkgray;
+    background-color: ${props=>props.theme.mintgreen};
     padding: 0.25em 0.5em;
     margin: 0em 1em 1em 0em;
     transition: background-color 0.25s, color 0.25s;
-    border-radius: 5px;
     border:none;
+    font-weight:bold;
+    color:black;
+    font-family: ${props=>props.theme.inconsolata};
 
     &:hover {
         ${props => {
             switch(props.location){
                 case 'landing': 
-                    return `color: ${props.theme.pine};`;
+                    return "color:black"
                 case 'aboutus':
                     return `color: ${props.theme.pine};`;
                 case 'profile':
@@ -23,11 +25,11 @@ const Button = styled.button`
                 default:
                     return "color: black";
             }
-            return (
-                "color: black;"
-            )
+            // return (
+            //     "color: black;"
+            // )
         }}
-        background-color: ${props=>props.theme.blush};
+        background-color: ${props=>props.theme.mintgreen};
         border: none;
         cursor: pointer;
     };
@@ -36,7 +38,7 @@ const Button = styled.button`
     ${props => {
         switch(props.location){
             case 'landing': 
-                return "color: white;";
+                return "padding: 1% 3%;";
             case 'aboutus':
                 return `color: ${props.theme.pine};`;
             case 'profile':
@@ -45,11 +47,13 @@ const Button = styled.button`
                 return `color: ${props.theme.pine};`;
             case 'admin':
                     return `color: ${props.theme.pine};`;
+            default:
+                return `color: black;`;   
         }
-        return (
-            "color: white;"
+        // return (
+        //     "color: white;"
             
-        )
+        // )
     }}
 
     ${props => {

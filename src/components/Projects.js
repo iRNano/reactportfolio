@@ -12,7 +12,7 @@ const ProjectsDiv = styled.div`
     min-height:100vh;
     width:80%;
     margin: 0 auto;
-    background-color: white;
+    background-color: ${props=>props.theme.darkblue};
 `
 
 const ButtonsDiv = styled.div`
@@ -40,7 +40,13 @@ const SkillsDiv = styled.div`
     display:flex;
 
 `
+const StyledLayout= styled(Layout)`
+    background:${props=>props.theme.darkblue}
+`
 
+const StyledCard = styled(Card)`
+    background-color: ${props=>props.theme.darkblue};
+`
 
 const Projects = () => {
     const {Content} = Layout;
@@ -51,13 +57,13 @@ const Projects = () => {
     }
     return(
         
-            <Layout style={{"background-color":"white"}}>
+            <StyledLayout>
                 <Content>
                     <ProjectsDiv>
                         <Heading.H1 style={{padding: "1em 0em", "text-align": "center"}}>Projects</Heading.H1>
                         <Row gutter={40}>
                             <Col xs={24} lg={8}>
-                                <Card
+                                <StyledCard
                                     
                                     bordered={false}
                                     cover={
@@ -80,16 +86,16 @@ const Projects = () => {
                                                 
                                             </SkillsDiv>
                                             <ButtonsDiv>
-                                                <a href="https://irnano.github.io/capstone1/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
-                                                <a href="https://github.com/iRNano/capstone1" target="_blank"><Button size="small">VIEW CODE</Button></a>
+                                                <a href="https://irnano.github.io/capstone1/" target="_blank"><Button size="small">View Website</Button></a>
+                                                <a href="https://github.com/iRNano/capstone1" target="_blank"><Button size="small">View Code</Button></a>
                                             </ButtonsDiv> 
                                         </div>
                                     }>
                                     </Meta>        
-                                </Card>
+                                </StyledCard>
                             </Col>
                             <Col xs={24} lg={8}>
-                                <Card
+                                <StyledCard
                                     bodyStyle={{"padding":"20px 0px"}}
                                     bordered={false} 
                                     cover={
@@ -110,17 +116,17 @@ const Projects = () => {
                                                     </TagsUL>
                                                 </SkillsDiv>
                                                 <ButtonsDiv>
-                                                    <a href="https://assetmania.herokuapp.com/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
-                                                    <a href="https://github.com/iRNano/assetmgmt" target="_blank"><Button size="small">VIEW CODE</Button></a>
+                                                    <a href="https://assetmania.herokuapp.com/" target="_blank"><Button size="small">View Website</Button></a>
+                                                    <a href="https://github.com/iRNano/assetmgmt" target="_blank"><Button size="small">View Code</Button></a>
                                                 </ButtonsDiv>
                                             </div>
                                         }
                                     >                                    
                                     </Meta>                                    
-                                </Card>
+                                </StyledCard>
                             </Col>    
                             <Col xs={24} lg={8}>
-                                <Card
+                                <StyledCard
                                     bordered={false}
                                     cover={
                                         <img src={nagrand}></img>
@@ -142,19 +148,19 @@ const Projects = () => {
                                                     </TagsUL>
                                                 </SkillsDiv>
                                                 <ButtonsDiv>
-                                                    <a href="https://nagrand-hotel.netlify.app/" target="_blank"><Button size="small">VIEW WEBSITE</Button></a>
-                                                    <a href="https://github.com/iRNano/nagrandhotel" target="_blank"><Button size="small">VIEW CODE</Button></a>
+                                                    <a href="https://nagrand-hotel.netlify.app/" target="_blank"><Button size="small">View Website</Button></a>
+                                                    <a href="https://github.com/iRNano/nagrandhotel" target="_blank"><Button size="small">View Code</Button></a>
                                                 </ButtonsDiv>
                                             </div>
                                         }
                                     >
                                     </Meta>                
-                                </Card>
+                                </StyledCard>
                             </Col>
                         </Row>
                     </ProjectsDiv>
                 </Content>
-            </Layout>
+            </StyledLayout>
     )
 }
 

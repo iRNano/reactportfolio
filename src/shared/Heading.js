@@ -2,10 +2,12 @@ import {rem} from 'polished'
 import styled, {css} from 'styled-components'
 
 const baseStyles = css`
+    font-family:${props=>props.theme.inconsolata};
+    color:white;
     ${props => {
         switch(props.location){
-            case'rooms':
-                return `color: ${props.theme.pine};`
+            case'skills':
+                return `padding-top: 1em;`
             case'booking':
                 return `color: ${props.theme.pine};`
             case'checkout':
@@ -15,7 +17,7 @@ const baseStyles = css`
             case'admin':
                 return `color: ${props.theme.pine};`
         }
-        return "color:black;"
+        return "color:WHITE;"
     }}
     line-height: 1.2;
 `;
