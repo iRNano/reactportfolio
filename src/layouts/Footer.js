@@ -15,11 +15,12 @@ const Footer = () => {
         justify-content:center;
         align-item:center;
         background: ${props=>props.theme.mintgreen};
+        font-family: ${props=>props.theme.inconsolata};
     `
     return(
         <StyledLayout>
             <StyledFooter>
-                Made with love by Adrian Valdepenas
+                Made by Adrian Valdepeñas
             </StyledFooter>
         </StyledLayout>
     )

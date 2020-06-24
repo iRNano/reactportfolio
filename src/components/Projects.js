@@ -46,6 +46,18 @@ const StyledLayout= styled(Layout)`
 
 const StyledCard = styled(Card)`
     background-color: ${props=>props.theme.darkblue};
+
+`
+
+const StyledImg = styled.img`
+    filter:grayscale(100%);
+    &:hover{
+        filter:grayscale(0%);
+    }
+`
+
+const StyledP = styled.p`
+    color:white;
 `
 
 const Projects = () => {
@@ -60,14 +72,14 @@ const Projects = () => {
             <StyledLayout>
                 <Content>
                     <ProjectsDiv>
-                        <Heading.H1 style={{padding: "1em 0em", "text-align": "center"}}>Projects</Heading.H1>
+                        <Heading.H0 location="title" style={{padding: "1em 0em", "text-align": "center"}}>Projects</Heading.H0>
                         <Row gutter={40}>
                             <Col xs={24} lg={8}>
                                 <StyledCard
                                     
                                     bordered={false}
                                     cover={
-                                        <img src={happnails}></img>
+                                        <StyledImg class="project" src={happnails}></StyledImg>
                                     }
                                     bodyStyle={{"padding":"20px 0px"}}
                                     style={{"margin": "5% 0%"}}
@@ -75,7 +87,7 @@ const Projects = () => {
                                     <Meta title={<Heading.H3>Happy Nails</Heading.H3>}
                                         description={
                                         <div>
-                                            <p>Static Website</p>
+                                            <StyledP class="description">Static Website</StyledP>
                                             <SkillsDiv>
                                                 <TagsUL>
                                                     <li>HTML</li>
@@ -99,7 +111,7 @@ const Projects = () => {
                                     bodyStyle={{"padding":"20px 0px"}}
                                     bordered={false} 
                                     cover={
-                                        <img src={assetmania}></img>
+                                        <StyledImg src={assetmania}></StyledImg>
                                     }
                                     style={{"margin": "5% 0%"}}
                                 >
@@ -107,7 +119,7 @@ const Projects = () => {
                                         title={<Heading.H3>Asset Mania</Heading.H3>}
                                         description={
                                             <div>
-                                                <p>Asset Management System</p>
+                                                <StyledP>IT Asset Management System</StyledP>
                                                 <SkillsDiv>
                                                     <TagsUL>
                                                             <li>PHP</li>
@@ -129,7 +141,7 @@ const Projects = () => {
                                 <StyledCard
                                     bordered={false}
                                     cover={
-                                        <img src={nagrand}></img>
+                                        <StyledImg src={nagrand}></StyledImg>
                                     }
                                     bodyStyle={{"padding":"20px 0px"}}
                                     style={{"margin": "5% 0%"}}
@@ -138,7 +150,7 @@ const Projects = () => {
                                         title={<Heading.H3>Nagrand Resort & Spa</Heading.H3>}
                                         description={
                                             <div>
-                                                <p>Reservation System</p>
+                                                <StyledP>Hotel Booking System</StyledP>
                                                 <SkillsDiv>
                                                     <TagsUL>
                                                         <li>REACTJS</li>

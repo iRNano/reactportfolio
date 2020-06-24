@@ -20,3 +20,4 @@ export const mintgreen = "#80EDB6"
 
 //portfolio font family
 export const inconsolata = "Inconsolata"
+export const navbarbrand = "</Adrian"
