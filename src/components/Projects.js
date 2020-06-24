@@ -73,7 +73,7 @@ const Projects = () => {
                 <Content>
                     <ProjectsDiv>
                         <Heading.H0 location="title" style={{padding: "1em 0em", "text-align": "center"}}>Projects</Heading.H0>
-                        <Row gutter={40}>
+                        <Row gutter={40} style={{"margin-bottom": "4em"}}>
                             <Col xs={24} lg={8}>
                                 <StyledCard
                                     
