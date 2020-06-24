@@ -158,7 +158,7 @@ const Cover = () =>  {
                         </StyledCol>
                         <StyledCol lg={{span:10}} xs={{span:24}}>
                             <Heading.H1 style={{margin:0}}>Adrian </Heading.H1>
-                            <Heading.H1>Valdepeñas</Heading.H1>
+                            <Heading.H1 style={{margin:0}}>Valdepeñas</Heading.H1>
                             <Heading.H4>Full Stack Web Developer</Heading.H4>
                             <a href={`${process.env.PUBLIC_URL}/ValdepenasAdrianWDCV.pdf`} download><Button size="small" location="landing">Download Resume</Button></a>
                             <IconSizes>

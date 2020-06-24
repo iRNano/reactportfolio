@@ -4,7 +4,7 @@ const Button = styled.button`
     appearance: none;
     background-color: ${props=>props.theme.mintgreen};
     padding: 0.25em 0.5em;
-    margin: 0em 1em 1em 0em;
+    margin: 1em 0em 1em 0em;
     transition: background-color 0.25s, color 0.25s;
     border:none;
     font-weight:bold;

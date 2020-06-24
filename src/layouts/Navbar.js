@@ -72,7 +72,7 @@ const Navbar = () => {
         padding:2% 4%;
         background:${props=>props.theme.darkblue};
         @media all and (max-width: 767px){
-            padding:6% 12%;
+            padding:6% 8%;
         }
         
         
