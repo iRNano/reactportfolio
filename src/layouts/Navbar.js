@@ -3,7 +3,7 @@ import {Layout, Menu} from 'antd'
 import styled from 'styled-components'
 import brand from '../assets/images/brand.png'
 import contact from '../assets/images/contact.png'
-import MailtoUI from '/Users/adrianvaldepenas/Documents/zuittOL/portfolio/node_modules/mailtoui/dist/mailtoui-min.js'
+
 
 
 const StyledLayout = styled(Layout)`
@@ -82,10 +82,6 @@ const Navbar = () => {
     //     overflow:auto;
     // `
 
-    const onClickHandler = () => {
-        console.log('click')
-        MailtoUI.run();
-    }
     return(
         <StyledLayout>
             <StyledHeader>
