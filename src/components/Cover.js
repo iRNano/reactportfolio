@@ -64,7 +64,7 @@ const ProfilePic = styled.img.attrs(
 
     //xs
     @media all and (max-width:767px){
-        max-width: 200px;   
+        max-width: 230px;   
     }
 `
 
@@ -153,10 +153,10 @@ const Cover = () =>  {
             <StyledLayout>
                 <Content>                    
                     <Row justify="center" gutter={24} style={{margin:0}}>
-                        <StyledCol location="profilepic" lg={{span: 10}} xl={{span:10}} xs={{offset:2,span:20}}>
+                        <StyledCol location="profilepic" lg={{span: 10}} xl={{span:10}} xs={{offset:0,span:24}}>
                             <ProfilePic></ProfilePic>
                         </StyledCol>
-                        <StyledCol lg={{offset:0,span:10}} xs={{span:20,offset:2}}>
+                        <StyledCol lg={{span:10}} xs={{span:24}}>
                             <Heading.H1 style={{margin:0}}>Adrian </Heading.H1>
                             <Heading.H1>Valdepeñas</Heading.H1>
                             <Heading.H4>Full Stack Web Developer</Heading.H4>
