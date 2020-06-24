@@ -10,7 +10,7 @@ import nagrand from '../assets/images/nagrand500.png'
 
 const ProjectsDiv = styled.div`
     min-height:100vh;
-    width:80%;
+    width:60%;
     margin: 0 auto;
     background-color: ${props=>props.theme.darkblue};
 `
