@@ -160,7 +160,7 @@ const Cover = () =>  {
                             <Heading.H1 style={{margin:0}}>Adrian </Heading.H1>
                             <Heading.H1 style={{margin:0}}>Valdepeñas</Heading.H1>
                             <Heading.H4>Full Stack Web Developer</Heading.H4>
-                            <a href={`${process.env.PUBLIC_URL}/ValdepenasAdrianWDCV.pdf`} download><Button size="small" location="landing">Download Resume</Button></a>
+                            <a href={`${process.env.PUBLIC_URL}/ValdepenasAdrianCV.pdf`} download><Button size="small" location="landing">Download Resume</Button></a>
                             <IconSizes>
                                 <a href="https://github.com/iRNano" target="_blank"><img class="icons" src={github}></img></a>
                                 <a href="https://gitlab.com/valdepenas.adrian" target="_blank"> <img class="icons" src={gitlab}></img></a>
