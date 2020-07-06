@@ -2,31 +2,40 @@ import React from "react";
 import { Layout, Row, Col } from "antd";
 import styled from "styled-components";
 import Heading from "../shared/Heading";
-import happnails from "../assets/images/happnails500.png";
-import assetmania from "../assets/images/assetmania500.png";
-import nagrand from "../assets/images/nagrand500.png";
+import hnThumbnail from "../assets/images/happnails500.png";
+import amThumbnail from "../assets/images/assetmania500.png";
+import ngThumbnail from "../assets/images/nagrand500.png";
 import Card from "../shared/Card";
 import Wrapper from "../layouts/Wrapper";
 
-let skills, links, repo;
-
-skills = {
-  happynails: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
-  assetmania: ["PHP", "LARAVEL", "MYSQL"],
-  nagrand: ["REACT", "EXPRESS", "NODE", "MONGODB"],
+const assetmania = {
+  title: "Asset Mania",
+  desc: "IT Asset Management System",
+  skills: ["PHP", "LARAVEL", "MYSQL"],
+  link: "https://assetmania.herokuapp.com/",
+  repo: "https://github.com/iRNano/assetmgmt",
+  thumbnail: amThumbnail,
 };
 
-links = {
-  happynails: "https://irnano.github.io/capstone1/",
-  assetmania: "https://assetmania.herokuapp.com/",
-  nagrand: "https://nagrand-hotel.netlify.app/",
+const happynails = {
+  title: "Happy Nails",
+  desc: "Static Website",
+  skills: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP"],
+  link: "https://irnano.github.io/capstone1/",
+  repo: "https://github.com/iRNano/capstone1",
+  thumbnail: hnThumbnail,
 };
 
-repo = {
-  happynails: "https://github.com/iRNano/capstone1",
-  assetmania: "https://github.com/iRNano/assetmgmt",
-  nagrand: "https://github.com/iRNano/nagrandhotel",
+const nagrand = {
+  title: "Nagrand Resort & Spa",
+  desc: "Hotel Booking System",
+  skills: ["REACT", "EXPRESS", "NODE", "MONGODB"],
+  link: "https://nagrand-hotel.netlify.app/",
+  repo: "https://github.com/iRNano/nagrandhotel",
+  thumbnail: ngThumbnail,
 };
+
+const projects = [happynails, assetmania, nagrand];
 
 const StyledLayout = styled(Layout)`
   background: ${(props) => props.theme.darkblue};
@@ -35,6 +44,18 @@ const StyledLayout = styled(Layout)`
 const Projects = () => {
   const { Content } = Layout;
 
+  const showProjects = projects.map((project) => (
+    <Col xs={24} lg={8}>
+      <Card
+        cover={project.thumbnail}
+        title={project.title}
+        desc={project.desc}
+        skills={project.skills}
+        website={project.link}
+        repo={project.repo}
+      />
+    </Col>
+  ));
   return (
     <Wrapper location="projects">
       <StyledLayout>
@@ -47,36 +68,7 @@ const Projects = () => {
           </Heading.H0>
 
           <Row gutter={40} style={{ "margin-bottom": "4em" }}>
-            <Col xs={24} lg={8}>
-              <Card
-                cover={happnails}
-                title="Happy Nails"
-                desc="Static Website"
-                skills={skills.happynails}
-                website={links.happynails}
-                repo={repo.happynails}
-              />
-            </Col>
-            <Col xs={24} lg={8}>
-              <Card
-                cover={assetmania}
-                title="Asset Mania"
-                desc="IT Asset Management System"
-                skills={skills.assetmania}
-                website={links.assetmania}
-                repo={repo.assetmania}
-              />
-            </Col>
-            <Col xs={24} lg={8}>
-              <Card
-                cover={nagrand}
-                title="Nagrand Resort & Spa"
-                desc="Hotel Booking System"
-                skills={skills.nagrand}
-                website={links.nagrand}
-                repo={repo.nagrand}
-              />
-            </Col>
+            {showProjects}
           </Row>
         </Content>
       </StyledLayout>

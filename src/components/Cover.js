@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Row, Col } from "antd";
+import { Row } from "antd";
 import "antd/dist/antd.css";
 import styled from "styled-components";
 import Wrapper from "../layouts/Wrapper";
@@ -13,10 +13,7 @@ import linkedin from "../assets/images/linkedingray.png";
 //shared comp
 import Heading from "../shared/Heading";
 import Button from "../shared/Button";
-
-const StyledLayout = styled(Layout)`
-  background: ${(props) => props.theme.darkblue};
-`;
+import StyledAntDLayout from "../shared/StyledAntDLayout";
 
 const ContentDiv = styled.div`
   display: flex;
@@ -99,60 +96,21 @@ const IconSizes = styled.div`
   }
 `;
 
-const StyledCol = styled(Col)`
-    //padding
-    ${(props) => {
-      switch (props.location) {
-        case "profilepic":
-          return `padding-top:0;`;
-        default:
-          return `padding-top:50px;`;
-      }
-    }}
-    //alignment
-    ${(props) => {
-      switch (props.location) {
-        case "profilepic":
-          return `text-align:right;`;
-        default:
-          return `text-align:left;`;
-      }
-    }}
-    //lg
-    @media all and (min-width:1200px){
-        
-    }
-    //md
-    @media all and (max-width: 1199px){
-        
-    }
-    //sm
-    @media all and (max-width: 991px){
-        text-align:center;
-    }
-
-    //xs
-    @media all and (max-width: 767px){
-        text-align:center;
-    }
-`;
-
 const Cover = () => {
-  const { Content } = Layout;
   return (
     <Wrapper>
       <ContentDiv>
-        <StyledLayout>
+        <StyledAntDLayout.StyledLayout>
           <Row justify="center" gutter={24} style={{ margin: 0 }}>
-            <StyledCol
+            <StyledAntDLayout.StyledCol
               location="profilepic"
               lg={{ span: 10 }}
               xl={{ span: 10 }}
               xs={{ offset: 0, span: 24 }}
             >
               <ProfilePic></ProfilePic>
-            </StyledCol>
-            <StyledCol lg={{ span: 10 }} xs={{ span: 24 }}>
+            </StyledAntDLayout.StyledCol>
+            <StyledAntDLayout.StyledCol lg={{ span: 10 }} xs={{ span: 24 }}>
               <Heading.H1 style={{ margin: 0 }}>Adrian </Heading.H1>
               <Heading.H1 style={{ margin: 0 }}>Valdepeñas</Heading.H1>
               <Heading.H4>Full Stack Web Developer</Heading.H4>
@@ -179,9 +137,9 @@ const Cover = () => {
                   <img class="icons" src={linkedin}></img>
                 </a>
               </IconSizes>
-            </StyledCol>
+            </StyledAntDLayout.StyledCol>
           </Row>
-        </StyledLayout>
+        </StyledAntDLayout.StyledLayout>
       </ContentDiv>
     </Wrapper>
   );
