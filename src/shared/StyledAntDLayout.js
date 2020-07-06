@@ -5,7 +5,7 @@ const StyledRow = styled(Row)`
   margin: 0 auto;
   //lg
   @media all and (min-width: 1200px) {
-    // width: 50%;
+    width: 50%;
   }
   //md
   @media all and (max-width: 1199px) {

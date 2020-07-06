@@ -74,7 +74,11 @@ const Skills = () => {
       >
         Skills
       </Heading.H0>
-      <StyledAntDLayout.StyledRow justify="center" gutter={[0, 32]}>
+      <StyledAntDLayout.StyledRow
+        justify="center"
+        gutter={[0, 32]}
+        style={{ "margin-bottom": "4em" }}
+      >
         {showSkills}
       </StyledAntDLayout.StyledRow>
     </Wrapper>
