@@ -113,7 +113,7 @@ const Cover = () => {
             <StyledAntDLayout.StyledCol lg={{ span: 10 }} xs={{ span: 24 }}>
               <Heading.H1 style={{ margin: 0 }}>Adrian </Heading.H1>
               <Heading.H1 style={{ margin: 0 }}>Valdepeñas</Heading.H1>
-              <Heading.H4>Web Developer</Heading.H4>
+              <Heading.H4>Frontend Developer</Heading.H4>
               <a
                 href={`${process.env.PUBLIC_URL}/ValdepenasAdrianCV.pdf`}
                 download
