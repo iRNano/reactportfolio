@@ -61,17 +61,22 @@ const ProfilePic = styled.img.attrs({
 `;
 
 const IconSizes = styled.div`
-  width: 120px;
+  // width: 120px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   //sm
   @media all and (max-width: 991px) {
-    margin: 0 auto;
+    // margin: 0 auto;
+    justify-content:center;
   }
   // @media all and (max-width: 767px){
   //     margin: 0 auto;
   // }
+  
+  a{
+    padding: 0 .5em;
+  }
   .icons {
     margin: 5% 5% 0 0;
 
@@ -126,10 +131,10 @@ const Cover = () => {
                 <a href="https://github.com/iRNano" target="_blank">
                   <img class="icons" src={github}></img>
                 </a>
-                <a href="https://gitlab.com/valdepenas.adrian" target="_blank">
+                {/* <a href="https://gitlab.com/valdepenas.adrian" target="_blank">
                   {" "}
                   <img class="icons" src={gitlab}></img>
-                </a>
+                </a> */}
                 <a
                   href="https://www.linkedin.com/in/adrian-valdepenas-2b861a17b/"
                   target="_blank"
