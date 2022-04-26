@@ -30,7 +30,7 @@ const nagrand = {
   title: "Nagrand Resort & Spa",
   desc: "Hotel Booking System",
   skills: ["REACT", "EXPRESS", "NODE", "MONGODB"],
-  link: "https://nagrand-hotel.netlify.app/",
+  link: "https://nagrandhotel.vercel.app/",
   repo: "https://github.com/iRNano/nagrandhotel",
   thumbnail: ngThumbnail,
 };
