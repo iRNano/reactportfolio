@@ -5,6 +5,7 @@ import Heading from "../shared/Heading";
 import hnThumbnail from "../assets/images/happnails500.png";
 import amThumbnail from "../assets/images/assetmania500.png";
 import ngThumbnail from "../assets/images/nagrand500.png";
+import polaThumbnail from '../assets/images/pola_logo.png'
 import Card from "../shared/Card";
 import Wrapper from "../layouts/Wrapper";
 
@@ -26,16 +27,25 @@ const happynails = {
   thumbnail: hnThumbnail,
 };
 
+const artbypola = {
+  title: "Art By Pola",
+  desc: "React App",
+  skills: ["HTML", "CSS", "SEMANTIC-UI", "REACTJS"],
+  link: "https://artbypola.vercel.app/",
+  repo: "https://github.com/iRNano/artbypola",
+  thumbnail: polaThumbnail,
+};
+
 const nagrand = {
   title: "Nagrand Resort & Spa",
   desc: "Hotel Booking System",
-  skills: ["REACT", "EXPRESS", "NODE", "MONGODB"],
+  skills: ["REACTJS", "EXPRESS", "NODE", "MONGODB"],
   link: "https://nagrandhotel.vercel.app/",
   repo: "https://github.com/iRNano/nagrandhotel",
   thumbnail: ngThumbnail,
 };
 
-const projects = [happynails, assetmania, nagrand];
+const projects = [happynails, assetmania, nagrand, artbypola];
 
 const StyledLayout = styled(Layout)`
   background: ${(props) => props.theme.darkblue};
