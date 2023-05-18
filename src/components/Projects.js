@@ -6,6 +6,7 @@ import hnThumbnail from "../assets/images/happnails500.png";
 import amThumbnail from "../assets/images/assetmania500.png";
 import ngThumbnail from "../assets/images/nagrand500.png";
 import polaThumbnail from '../assets/images/pola_logo.png'
+import polaVerseThumbnail from '../assets/images/polaverse.png'
 import Card from "../shared/Card";
 import Wrapper from "../layouts/Wrapper";
 
@@ -44,8 +45,16 @@ const nagrand = {
   repo: "https://github.com/iRNano/nagrandhotel",
   thumbnail: ngThumbnail,
 };
+const polaverse = {
+  title: "Polaverse",
+  desc: "Anime Directory",
+  skills: ["REACTJS"],
+  link: "https://polaverse.vercel.app/",
+  repo: "https://github.com/iRNano/polaverse",
+  thumbnail: polaVerseThumbnail,
+};
 
-const projects = [happynails, assetmania, nagrand, artbypola];
+const projects = [happynails, nagrand, artbypola, polaverse];
 
 const StyledLayout = styled(Layout)`
   background: ${(props) => props.theme.darkblue};
