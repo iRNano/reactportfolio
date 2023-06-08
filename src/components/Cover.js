@@ -120,7 +120,7 @@ const Cover = () => {
               <Heading.H1 style={{ margin: 0 }}>Valdepeñas</Heading.H1>
               <Heading.H4>Frontend Developer</Heading.H4>
               <a
-                href={`${process.env.PUBLIC_URL}/ValdepenasAdrianCV2023.pdf`}
+                href={`${process.env.PUBLIC_URL}/ValdepenasAdrian.pdf`}
                 download
               >
                 <Button size="small" location="landing" margin="y">
@@ -136,7 +136,7 @@ const Cover = () => {
                   <img class="icons" src={gitlab}></img>
                 </a> */}
                 <a
-                  href="https://www.linkedin.com/in/adrian-valdepenas-2b861a17b/"
+                  href="https://www.linkedin.com/in/adrianvaldepenas/"
                   target="_blank"
                 >
                   <img class="icons" src={linkedin}></img>
