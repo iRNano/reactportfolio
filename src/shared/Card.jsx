@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "antd";
 import styled from "styled-components";
-import Heading from "../shared/Heading";
-import Button from "../shared/Button";
+import Heading from "./Heading";
+import Button from "./Button";
 
 const ButtonsDiv = styled.div`
   display: flex;

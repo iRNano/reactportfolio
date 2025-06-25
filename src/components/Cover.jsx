@@ -120,7 +120,7 @@ const Cover = () => {
               <Heading.H1 style={{ margin: 0 }}>Valdepeñas</Heading.H1>
               <Heading.H4>Frontend Developer</Heading.H4>
               <a
-                href={`${process.env.PUBLIC_URL}/ValdepenasAdrian.pdf`}
+                href={`/ValdepenasAdrian.pdf`}
                 download
               >
                 <Button size="small" location="landing" margin="y">
