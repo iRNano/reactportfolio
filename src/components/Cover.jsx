@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Row } from "antd";
 import "antd/dist/antd.css";
 import styled from "styled-components";
@@ -14,7 +14,7 @@ import linkedin from "../assets/images/linkedingray.png";
 import Heading from "../shared/Heading";
 import Button from "../shared/Button";
 import StyledAntDLayout from "../shared/StyledAntDLayout";
-
+import { getCV } from "../helper";
 const ContentDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -102,6 +102,23 @@ const IconSizes = styled.div`
 `;
 
 const Cover = () => {
+  const [cv, setCV] = useState(null)
+  const cvLoaded = !!localStorage.getItem('cv_links');
+  console.log('cvLoaded', cvLoaded);
+  useEffect(()=>{
+    if(cvLoaded) setCV(JSON.parse(localStorage.getItem('cv_links')));
+    if(!cvLoaded) {
+      setCV(JSON.parse(fetchCV()));
+    }
+
+  },[])
+
+  console.log('cv', cv)
+  console.log('cv', cv?.view)
+
+  const fetchCV = async () => {
+    return await getCV();
+  }
   return (
     <Wrapper>
       <ContentDiv>
@@ -119,14 +136,20 @@ const Cover = () => {
               <Heading.H1 style={{ margin: 0 }}>Adrian </Heading.H1>
               <Heading.H1 style={{ margin: 0 }}>Valdepeñas</Heading.H1>
               <Heading.H4>Frontend Developer</Heading.H4>
+              {
+                cv && (
               <a
-                href={`/ValdepenasAdrian.pdf`}
+                href={!!cv ? cv.view : cv.download}
                 download
+                target="_blank"
               >
                 <Button size="small" location="landing" margin="y">
                   Download Resume
                 </Button>
               </a>
+
+                )
+              }
               <IconSizes>
                 <a href="https://github.com/iRNano" target="_blank">
                   <img class="icons" src={github}></img>

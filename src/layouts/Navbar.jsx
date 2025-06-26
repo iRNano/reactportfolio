@@ -1,10 +1,8 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import {Layout, Menu} from 'antd'
 import styled from 'styled-components'
 import brand from '../assets/images/brand.png'
 import contact from '../assets/images/contact.png'
-
-
 
 const StyledLayout = styled(Layout)`
     background:transparent;
