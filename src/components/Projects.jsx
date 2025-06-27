@@ -56,15 +56,11 @@ const polaverse = {
 
 const projects = [happynails, nagrand, artbypola, polaverse];
 
-const StyledLayout = styled(Layout)`
-  background: ${(props) => props.theme.darkblue};
-`;
-
 const Projects = () => {
   const { Content } = Layout;
 
   const showProjects = projects.map((project) => (
-    <Col xs={24} lg={8}>
+    <Col xs={24} lg={8} key={project.title}>
       <Card
         cover={project.thumbnail}
         title={project.title}
@@ -81,12 +77,12 @@ const Projects = () => {
         <Content>
           <Heading.H0
             location="title"
-            style={{ padding: "1em 0em", "text-align": "center" }}
+            style={{ padding: "1em 0em", "textAlign": "center" }}
           >
             Projects
           </Heading.H0>
 
-          <Row gutter={40} style={{ "margin-bottom": "4em" }}>
+          <Row gutter={40} style={{ "marginBottom": "4em" }}>
             {showProjects}
           </Row>
         </Content>
@@ -96,3 +92,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
+const StyledLayout = styled(Layout)`
+  background: ${(props) => props.theme.darkblue};
+`;

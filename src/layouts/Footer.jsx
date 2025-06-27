@@ -1,22 +1,6 @@
-import React from 'react'
-import {Layout} from 'antd'
-import styled from 'styled-components'
-
-
-const StyledLayout = styled(Layout)`
-    background: ${props=>props.theme.mintgreen};
-`
+import { StyledLayout, StyledFooter } from "./Footer.style";
 
 const Footer = () => {
-    const {Footer} = Layout;    
-
-    const StyledFooter = styled(Footer)`
-        display:flex;
-        justify-content:center;
-        align-item:center;
-        background: ${props=>props.theme.mintgreen};
-        font-family: ${props=>props.theme.inconsolata};
-    `
     return(
         <StyledLayout>
             <StyledFooter>
@@ -27,3 +11,4 @@ const Footer = () => {
 }
 
 export default Footer;
+

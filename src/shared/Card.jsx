@@ -43,11 +43,11 @@ const StyledP = styled.p`
 `;
 const Cardd = (props) => {
   const { Meta } = Card;
-  const skills = props.skills.map((skill) => <li>{skill}</li>);
+  const skills = props.skills.map((skill, index) => <li key={index}>{skill}</li>);
   return (
     <StyledCard
       bordered={false}
-      cover={<StyledImg class="project" src={props.cover}></StyledImg>}
+      cover={<StyledImg className="project" src={props.cover}></StyledImg>}
       bodyStyle={{ padding: "20px 0px" }}
       style={{ margin: "5% 0%" }}
     >
@@ -55,7 +55,7 @@ const Cardd = (props) => {
         title={<Heading.H3>{props.title}</Heading.H3>}
         description={
           <div>
-            <StyledP class="description">{props.desc}</StyledP>
+            <StyledP className="description">{props.desc}</StyledP>
             <SkillsDiv>
               <TagsUL>{skills}</TagsUL>
             </SkillsDiv>
