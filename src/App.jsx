@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import Navbar from "./layouts/Navbar";
 import Cover from "./components/Cover";
 import Skills from "./components/Skills";
@@ -10,7 +9,7 @@ import Wrapper from "./layouts/Wrapper";
 
 const App = () => {
   return (
-    <Fragment>
+
       <ThemeProvider theme={theme}>
         <Wrapper>
           <Navbar></Navbar>
@@ -20,7 +19,7 @@ const App = () => {
           <Footer></Footer>
         </Wrapper>
       </ThemeProvider>
-    </Fragment>
+
   );
 };
 
