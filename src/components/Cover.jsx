@@ -1,5 +1,4 @@
 import { Row } from "antd";
-import "antd/dist/antd.css";
 
 import Wrapper from "../layouts/Wrapper";
 
