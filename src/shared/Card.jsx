@@ -47,7 +47,14 @@ const Cardd = (props) => {
   return (
     <StyledCard
       bordered={false}
-      cover={<StyledImg className="project" src={props.cover}></StyledImg>}
+      cover={
+        <StyledImg
+          className="project"
+          src={props.cover}
+          alt={`${props.title} thumbnail`}
+          loading="lazy"
+        />
+      }
       bodyStyle={{ padding: "20px 0px" }}
       style={{ margin: "5% 0%" }}
     >
@@ -60,12 +67,12 @@ const Cardd = (props) => {
               <TagsUL>{skills}</TagsUL>
             </SkillsDiv>
             <ButtonsDiv>
-              <a href={props.website} target="_blank">
+              <a href={props.website} target="_blank" rel="noreferrer noopener">
                 <Button size="small" margin="none">
                   View Website
                 </Button>
               </a>
-              <a href={props.repo} target="_blank">
+              <a href={props.repo} target="_blank" rel="noreferrer noopener">
                 <Button size="small" margin="x">
                   View Code
                 </Button>

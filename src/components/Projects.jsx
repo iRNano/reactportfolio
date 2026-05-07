@@ -77,12 +77,12 @@ const Projects = () => {
         <Content>
           <Heading.H0
             location="title"
-            style={{ padding: "1em 0em", "textAlign": "center" }}
+            style={{ padding: "1em 0em", textAlign: "center" }}
           >
             Projects
           </Heading.H0>
 
-          <Row gutter={40} style={{ "marginBottom": "4em" }}>
+          <Row gutter={40} style={{ marginBottom: "4em" }}>
             {showProjects}
           </Row>
         </Content>

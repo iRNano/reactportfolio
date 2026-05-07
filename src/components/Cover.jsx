@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Row } from "antd";
 import "antd/dist/antd.css";
 
@@ -12,27 +11,11 @@ import linkedin from "../assets/images/linkedingray.png";
 import Heading from "../shared/Heading";
 import Button from "../shared/Button";
 import StyledAntDLayout from "../shared/StyledAntDLayout";
-import { getCV } from "../helper";
+import { getResumeUrl } from "../helper";
 import { ContentDiv, ProfilePic, IconSizes} from "./Cover.style";
 
 const Cover = () => {
-  const [cv, setCV] = useState(null)
-  const cvLoaded = !!localStorage.getItem('cv_links');
-  console.log('cvLoaded', cvLoaded);
-  useEffect(()=>{
-    if(cvLoaded) setCV(JSON.parse(localStorage.getItem('cv_links')));
-    if(!cvLoaded) {
-      setCV(JSON.parse(fetchCV()));
-    }
-
-  },[])
-
-  console.log('cv', cv)
-  console.log('cv', cv?.view)
-
-  const fetchCV = async () => {
-    return await getCV();
-  }
+  const resumeUrl = getResumeUrl();
   return (
     <Wrapper>
       <ContentDiv>
@@ -50,29 +33,30 @@ const Cover = () => {
               <Heading.H1 style={{ margin: 0 }}>Adrian </Heading.H1>
               <Heading.H1 style={{ margin: 0 }}>Valdepeñas</Heading.H1>
               <Heading.H4>Frontend Developer</Heading.H4>
-              {
-                cv && (
               <a
-                href={!!cv ? cv.view : cv.download}
+                href={resumeUrl}
                 download
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 <Button size="small" location="landing" margin="y">
                   Download Resume
                 </Button>
               </a>
-
-                )
-              }
               <IconSizes>
-                <a href="https://github.com/iRNano" target="_blank">
-                  <img className="icons" src={github}></img>
+                <a
+                  href="https://github.com/iRNano"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img className="icons" src={github} alt="GitHub" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/adrianvaldepenas/"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <img className="icons" src={linkedin}></img>
+                  <img className="icons" src={linkedin} alt="LinkedIn" />
                 </a>
               </IconSizes>
             </StyledAntDLayout.StyledCol>

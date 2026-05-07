@@ -25,12 +25,12 @@ export const ProfilePic = styled.img.attrs({
     max-width: 350px;
   }
   //md
-  @media all and (max-width: 1199) {
+  @media all and (max-width: 1199px) {
     max-width: 300px;
   }
   //sm
   @media all and (max-width: 991px) {
-    max-width: 250pxpx;
+    max-width: 250px;
   }
 
   //xs

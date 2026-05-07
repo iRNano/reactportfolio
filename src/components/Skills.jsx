@@ -35,7 +35,7 @@ const Skills = () => {
   const showSkills = skillsArray.map((skill) => (
     <StyledAntDLayout.StyledCol location="skills" key={skill.name}>
       <StyledSkill>
-        <img className="skill" src={skill.img}></img>
+        <img className="skill" src={skill.img} alt={skill.name} loading="lazy" />
         <Heading.H4 location="skills">{skill.name}</Heading.H4>
       </StyledSkill>
     </StyledAntDLayout.StyledCol>

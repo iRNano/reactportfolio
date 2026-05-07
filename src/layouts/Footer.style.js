@@ -9,7 +9,7 @@ export const StyledLayout = styled(Layout)`
 export const StyledFooter = styled(Footer)`
     display:flex;
     justify-content:center;
-    align-item:center;
+    align-items:center;
     background: ${props=>props.theme.mintgreen};
     font-family: ${props=>props.theme.inconsolata};
 `
